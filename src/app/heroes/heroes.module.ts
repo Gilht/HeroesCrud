@@ -8,6 +8,8 @@ import { LayoutPageComponent } from './pages/layout-page/layout-page.component';
 import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { NewHeroePageComponent } from './pages/new-heroe-page/new-heroe-page.component';
 
+import { MaterialModule } from '../material/material.module';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { NewHeroePageComponent } from './pages/new-heroe-page/new-heroe-page.com
   ],
   imports: [
     CommonModule,
-    HeroesRoutingModule
+    HeroesRoutingModule,
+    MaterialModule
   ]
 })
 export class HeroesModule { }
