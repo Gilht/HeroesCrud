@@ -1,1 +1,31 @@
-<p>search-page works!</p>
+<div class="flex flex-column p-2">
+    <h3>
+        Search
+    </h3>
+
+    <mat-form-field>
+        <mat-label>
+            search hero
+        </mat-label>
+
+        <input type="text" 
+        matInput
+        [formControl]="searchInput"
+        (input)="searchHero()"
+        [matAutocomplete]="myAutoComplete"
+        >
+
+        <mat-autocomplete autoActiveFirstOption
+        #myAutoComplete="matAutocomplete"
+        (optionSelected)="onSelectedOption($event)"
+        >
+        @for (hero of heroes; track $index) {
+            <mat-option [value]="hero">
+                {{hero.superhero}}
+            </mat-option>
+        }
+        
+
+        </mat-autocomplete>
+    </mat-form-field>
+</div>
