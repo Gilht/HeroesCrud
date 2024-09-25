@@ -1,0 +1,7 @@
+<h2 mat-dialog-title>Do you wanna delete the super heroe {{data.superhero}}?</h2>
+<mat-dialog-content>This will delete the superhero that you choose recently</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <span class="spacer"></span>
+  <button mat-button (click)="onNoConfirm()" color="primary">Delete</button>
+</mat-dialog-actions>
